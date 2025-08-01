@@ -856,26 +856,26 @@ header {
   }
 
 /* ===================== MEDIA QUERY  MÓVILES & TABLETS (≤1024px) ===================== */
-/* ===================== MEDIA QUERY  MÓVILES & TABLETS (≤1024px) ===================== */
+/* ========== MEDIA QUERY TABLETS (≤1024px) ========== */
 @media (max-width: 1024px) {
-  /* — Reset básicos — */
+  /* Reset generales */
   body {
     font-size: 16px;
     line-height: 1.6;
     margin: 0;
     padding: 0;
-    overflow-x: hidden;
     background-color: #fff;
+    overflow-x: hidden;
   }
 
-  /* — Titulares — */
+  /* Titulares centrados */
   h1, h2, h3, h4, h5, h6 {
     font-size: 1.4rem !important;
     text-align: center !important;
-    margin-bottom: 0.75em;
+    margin-bottom: 0.75em !important;
   }
 
-  /* — Párrafos — */
+  /* Párrafos justificados sin solaparse */
   p {
     font-size: 1rem !important;
     line-height: 1.6 !important;
@@ -884,16 +884,21 @@ header {
     word-wrap: break-word;
   }
 
-  /* — Hero — */
+  /* Hero text adaptado */
   .hero-text {
     position: static !important;
     padding: 16px !important;
     text-align: center !important;
   }
-  .hero-text h1 { font-size: 1.8rem !important; }
-  .hero-text p  { font-size: 1.1rem !important; margin-top: 0.75em !important; }
+  .hero-text h1 {
+    font-size: 1.8rem !important;
+  }
+  .hero-text p {
+    font-size: 1.1rem !important;
+    margin-top: 0.75em !important;
+  }
 
-  /* — Botón “Cotiza” — */
+  /* Botón “Cotiza” centrado */
   .btn-cotiza {
     display: block !important;
     margin: 1em auto !important;
@@ -902,7 +907,7 @@ header {
     border-radius: 50px !important;
   }
 
-  /* — Grid de servicios en 1 columna — */
+  /* Grid de servicios en una columna */
   .servicios {
     display: grid !important;
     grid-template-columns: 1fr !important;
@@ -919,7 +924,7 @@ header {
     margin: 0 auto 0.75em !important;
   }
 
-  /* — Modales — */
+  /* Modales responsivos */
   .modal-content {
     width: 90% !important;
     max-width: 90% !important;
@@ -929,14 +934,14 @@ header {
   .modal form input,
   .modal form textarea {
     width: 100% !important;
-    padding: 10px !important;
     font-size: 1rem !important;
+    padding: 10px !important;
     margin-bottom: 0.75em !important;
   }
   .modal form button {
     width: 100% !important;
-    padding: 12px !important;
     font-size: 1rem !important;
+    padding: 12px !important;
     border-radius: 50px !important;
   }
   .close-btn {
@@ -945,7 +950,7 @@ header {
     font-size: 24px !important;
   }
 
-  /* — Imágenes principales — */
+  /* Imágenes principales ajustadas */
   .imagen-telefono img,
   .imagen-cajas img,
   .imagen-cajas2 img {
@@ -965,10 +970,11 @@ header {
     margin: 1em auto !important;
   }
 
-  /* — Secciones de texto — */
+  /* Secciones de texto en columna */
   .seccion-telefono,
   .seccion-seguridad,
   .seccion-seguridad2 {
+    display: flex !important;
     flex-direction: column !important;
     padding: 20px !important;
     gap: 20px !important;
@@ -980,57 +986,10 @@ header {
     text-align: justify !important;
   }
 
-  /* — WhatsApp flotante — */
-  .whatsapp-float {
-    width: 100px !important;
-    height: 100px !important;
-    bottom: 20px !important;
-    right: 10px !important;
-  }
-  .whatsapp-float img {
-    width: 100% !important;
-    height: auto !important;
-  }
-
-  /* — Footer — */
+  /* Footer centrado y compacto */
   footer {
     text-align: center !important;
     padding: 20px !important;
-    font-size: 0.95rem !important;
     background-color: #fff !important;
   }
-}
-
-/* ===================== MÓVILES (≤768px) ===================== */
-@media (max-width: 768px) {
-  h1, h2 {
-    font-size: 1.4rem !important;
-  }
-  .hero-text {
-    padding: 12px !important;
-  }
-  .btn-cotiza {
-    width: 90% !important;
-    font-size: 1rem !important;
-    padding: 12px !important;
-  }
-}
-
-/* ===================== MUY PEQUEÑAS (≤480px) ===================== */
-@media (max-width: 480px) {
-  body {
-    padding: 10px !important;
-  }
-  h1, h2 {
-    font-size: 1.2rem !important;
-  }
-  .btn-cotiza {
-    font-size: 0.9rem !important;
-    padding: 10px !important;
-  }
-}
-
-/* ===================== ZOOM EN ESCRITORIO (≥1600px) ===================== */
-@media (min-width: 1600px) {
-  body { zoom: 125%; }
 }
